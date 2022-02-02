@@ -10,20 +10,20 @@ def hello_world():
 def Dojo():
     return 'Dojo'
 
-# @app.route('/say/<Flask>')
-# def say(Flask):
-#   print(Flask)
-#   return "Hi " + Flask
+@app.route('/say/<Flask>')
+def say(Flask):
+  print(Flask)
+  return "Hi " + Flask
 
-# @app.route('/say/<Michael>')
-# def say(Michael):
-#   print(Michael)
-#   return "Hi " + Michael  
+@app.route('/say/<Michael>')
+def say(Michael):
+  print(Michael)
+  return "Hi " + Michael  
 
-# @app.route('/say/<John>')
-# def say(John):
-#   print(John)
-#   return "Hi " + John
+@app.route('/say/<John>')
+def say(John):
+  print(John)
+  return "Hi " + John
 
 @app.route('/say/<name>')
 def say_name(name):
@@ -34,11 +34,9 @@ def repeat_word(num, word):
     output = ''
 
     for i in range(0,num):
-        output += f"<p>{word}</p>"
+      output += f"<p>{word}</p>"
 
     return output    
 
-@app.route('/repeat')
-
 if __name__=="__main__":
-  app.run(debug=True)
+    app.run(debug=True)
