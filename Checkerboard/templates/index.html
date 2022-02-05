@@ -15,28 +15,27 @@
       text-align: center;
       padding: 25px;
       margin: 30px;
-      background-color: {{color_one}};
-      color: {{color_two}};
-      
+    }
+
+    .color1 {
+      color: black;
+    }
+
+    .color2 {
+      color: orange;
     }
   </style>
 </head>
 <body>
   <h1>Checkerboard</h1>
   <table>
-    <tbody>
-      {% for i in range(0,row) %}
-        <tr>
-          {% for x in the range(0,col) %}
-          {% if (x+1 % 2 == 0 %}
-            <td style="background-color: {{color_one}};"></td>
-            {% else%}
-            <td style="background-color: {{color_two}};"></td>
-            {% endif %}
-          {% endfor %}  
-        </tr>
+     {% for i in range (8): %}
+      <tr>
+        {% for x in range(8) %}
+        <td class='color{{ (i+x%2+1) }}'></td>
         {% endfor %}
-    </tbody>
+      </tr>
+  {% endfor %}    
   </table>
   
 </body>
