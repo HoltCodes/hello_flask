@@ -17,31 +17,41 @@
       margin: 30px;
     }
 
-    .color1 {
-      color: black;
+    body {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+
     }
 
-    .color2 {
-      color: orange;
+    td {
+      width: 60px;
+      height: 60px;
     }
 
-    table tr td {
-      height: 50px;
-      width: 50px;
-    }
+    
+
+    
   </style>
 </head>
 <body>
   <h1>Checkerboard</h1>
+
   <table>
-     {% for i in range (8): %}
-      <tr>
-        {% for x in range(8) %}
-        <td class='color{{ (i+x%2+1) }}'></td>
+    <tbody>
+      {% for i in range(0,row) %}
+        <tr>
+          {% for x in range(0,col) %}
+            {% if (x+i) % 2 == 0 %}
+              <td style="background-color: {{color_one}};"></td>
+            {% else %}  
+              <td style="background-color: {{color_two}};"></td>
+            {% endif %}
+          {% endfor %}  
+        </tr>
         {% endfor %}
-      </tr>
-  {% endfor %}    
+    </tbody>
   </table>
-  
 </body>
 </html>
