@@ -3,3 +3,14 @@ pipenv install flask
 pipenv shell
 pipenv install mysql
 python #filename
+
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route()
+def ():
+    return render_template()
+
+if __name__=="__main__":
+    app.run(debug=True)
