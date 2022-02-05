@@ -20,7 +20,7 @@
     }
 
     h1 {
-      align-items: center;
+      text-align: center;
     }
   </style>
   <title>Playground</title>
@@ -29,9 +29,9 @@
   <h1>Welcome</h1>
   
   <div class="wrapper">
-    { % for i in range(0,num) % }
-    <div class="box" style="background: {{color}};"></div>
-    { % endfor % }
+    {% for i in range(0,num) %}
+    <div class="box" style="background-color: {{color}};"></div>
+    {% endfor %}
   </div>
 </body>
 </html>
