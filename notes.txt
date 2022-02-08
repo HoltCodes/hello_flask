@@ -3,6 +3,7 @@ pipenv install flask
 pipenv shell
 pipenv install mysql
 python #filename
+pipenv install PyMySQL flask
 
 from flask import Flask, render_template
 
