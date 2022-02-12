@@ -7,6 +7,15 @@
   <title>First Flask</title>
 </head>
 <body>
+  <form action="/create_friend" method="post">
+    <label for="fname">First Name:</label>
+    <input type="text" name="fname">
+    <label for="lname">Last Name:</label>
+    <input type="text" name="lname">
+    <label for="occ" >Occupation:</label>
+    <input type="text" name="occ">
+    <input type="submit" value="Add Friend">
+  </form>
   <h1>These are my friends</h1>
   <table>
     <thead>
@@ -17,7 +26,7 @@
       </tr>
     </thead>
     <tbody>
-      {% for one_fried in friends %}
+      {% for one_friend in friends %}
         <tr>
           <td>{{ one_friend.first_name }}</td>
           <td>{{ one_friend.last_name }}</td>
