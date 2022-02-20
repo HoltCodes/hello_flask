@@ -4,6 +4,7 @@ pipenv shell
 pipenv install mysql
 python #filename
 pipenv install PyMySQL flask
+pipenv install flask-bcrypt
 
 from flask import Flask, render_template
 
